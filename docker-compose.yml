@@ -1,0 +1,19 @@
+services:
+  postgres:
+    image: postgres:15
+    container_name: chat_app_db
+    restart: always
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: password123
+      POSTGRES_DB: pro_chat_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql # Tự động chạy script tạo bảng
+
+  redis:
+    image: redis:7
+    container_name: chat_app_redis
+    ports:
+      - "6379:6379"
