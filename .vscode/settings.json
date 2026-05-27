@@ -1,0 +1,8 @@
+{
+    "chat.tools.terminal.autoApprove": {
+        "/^cd \"c:\\\\Users\\\\cusin\\\\Downloads\\\\Multi-Tenant-Pro-Chat-App\\\\be\"; npm install --silent; npm run build$/": {
+            "approve": true,
+            "matchCommandLine": true
+        }
+    }
+}
